@@ -6,7 +6,7 @@ import {
   GetFakeFillerOptions,
   GetMessage,
   SaveFakeFillerOptions,
-  DEFAULT_EMAIL_CUSTOM_FIELD,
+  //DEFAULT_EMAIL_CUSTOM_FIELD,
 } from "src/common/helpers";
 import { MessageRequest, IProfile, IFakeFillerOptions, FirebaseUser, FirebaseCustomClaims } from "src/types";
 
@@ -134,6 +134,12 @@ chrome.contextMenus.onClicked.addListener((info) => {
       allFrames: true,
     });
   }
+  if (info.menuItemId === "fake-filler-export-form") {
+    chrome.tabs.executeScript({
+      code: "window.fakeFiller.exportThisForm();",
+      allFrames: true,
+    });
+  }
   if (info.menuItemId === "fake-filler-input") {
     chrome.tabs.executeScript({
       code: "window.fakeFiller.fillThisInput();",
@@ -152,6 +158,12 @@ chrome.commands.onCommand.addListener((command) => {
   if (command === "fill_this_form") {
     chrome.tabs.executeScript({
       code: "window.fakeFiller.fillThisForm();",
+      allFrames: true,
+    });
+  }
+  if (command === "export_this_form") {
+    chrome.tabs.executeScript({
+      code: "window.fakeFiller.exportThisForm();",
       allFrames: true,
     });
   }

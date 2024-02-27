@@ -198,6 +198,12 @@ const CreateContextMenus = (enableContextMenu: boolean): void => {
     });
 
     chrome.contextMenus.create({
+      id: "fake-filler-export-form",
+      title: "Export this form",
+      contexts: ["editable"],
+    });
+
+    chrome.contextMenus.create({
       id: "fake-filler-input",
       title: "Fill this input",
       contexts: ["editable"],

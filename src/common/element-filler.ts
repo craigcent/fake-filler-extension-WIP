@@ -135,7 +135,7 @@ class ElementFiller {
     return undefined;
   }
 
-  private findCustomField(elementName: string, matchTypes: CustomFieldTypes[] = []): ICustomField | undefined {
+  public findCustomField(elementName: string, matchTypes: CustomFieldTypes[] = []): ICustomField | undefined {
     let foundField: ICustomField | undefined;
 
     // Try finding the custom field from a profile if available.
