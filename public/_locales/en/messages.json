@@ -637,5 +637,23 @@
   },
   "upgradeToFakeFillerPro": {
     "message": "Upgrade to Fake Filler Pro"
+  },
+  "exportSettings": {
+    "message": "Export Settings"
+  },
+  "exportSettings_customizeExportMethod": {
+    "message": "Customize Export Method"
+  },
+  "exportSettings_exportMethodHelp": {
+    "message": "You can choose to export form data by clipboard, dev console, or via file."
+  },
+  "exportSettings_mode_console": {
+    "message": "developer console"
+  },
+  "exportSettings_mode_clipboard": {
+    "message": "clipboard"
+  },
+  "exportSettings_mode_file": {
+    "message": "file"
   }
 }

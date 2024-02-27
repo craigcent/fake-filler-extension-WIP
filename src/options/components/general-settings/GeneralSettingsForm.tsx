@@ -160,6 +160,36 @@ const GeneralSettingsForm = (props: Props) => {
             helpText={GetMessage("generalSettings_defaultMaxLength_help")}
           />
 
+          <h2>{GetMessage("exportSettings")}</h2>
+          <div className="form-group row">
+            <label className="col-sm-3 col-form-label text-sm-right" htmlFor="exportMethods">
+              {GetMessage("exportSettings_customizeExportMethod")}
+            </label>
+            <div className="col-sm-9">
+              <RadioButtonField
+                name="exportMethods"
+                value="console"
+                label={GetMessage("exportSettings_mode_console")}
+              />
+              <RadioButtonField
+                name="exportMethods"
+                value="clipboard"
+                label={GetMessage("exportSettings_mode_clipboard")}
+              />
+              <RadioButtonField
+                name="exportMethods"
+                value="clipboard"
+                label={GetMessage("exportSettings_mode_file")}
+              />
+              <HtmlPhrase
+                phrase={GetMessage("exportSettings_exportMethodHelp")}
+                as="div"
+                className="form-text text-muted"
+              />
+            </div>
+          </div>
+
+
           <h2>{GetMessage("generalSettings")}</h2>
           <CheckboxField
             name="triggerClickEvents"
